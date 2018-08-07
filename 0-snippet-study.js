@@ -1,6 +1,4 @@
-// Take the expression you'll be expanding and turn the README into a snippet study.
-
-// then write some exercises in this file
+// start writing your exercises here instead of replit
 // you can practice them in the chromdev debugger
 
 debugger
