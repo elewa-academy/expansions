@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- the function -->
+    <script src="./1-break-down.js"></script>
+    <script src="./2-build-up.js"></script>
+
+    <!-- pre-built tests -->
+    <script src="./scripts/tiny-test.js"></script>
+	<script src="./scripts/test-cases.js"></script>
+
+
+</head>
+
+<body>
+	<h2>Remove 12</h2>
+	<p>
+		Write specs here
+        <!-- 
+        remove_12: Function
+            ARGs: 1
+                parameter: any primitive
+                    purpose: to be stripped of "12"s
+            RETURN: Number
+                the argument as a number, with any 12's missing
+            BEHAVIOR: takes in an argument, 
+                converts it to a string,
+                removes substring "12", 
+                and converts the result to a number -->
+    
+	</p>
+    <div>
+    	<p>Input:</p>
+        <input type="text" value="type" id="input-type">
+        <input type="text" value="value" id="input-value">
+    </div>    
+    <div>
+    	<p>Expected:</p>
+        <input type="text" value="type" id="expected-type">
+        <input type="text" value="value" id="expected-value">
+    </div>    
+    <br>
+    <button id="test-button">test it!</button>
+    <br>
+    <br>  
+    <div id="response-div"></div>
+
+    <script src="./scripts/handler.js"></script>
+    
+</body>
+
+</html>
