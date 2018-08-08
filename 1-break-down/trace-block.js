@@ -4,9 +4,6 @@ let input = 12345;
 let expected = 345;
 let output;
 
-console.log("Number(String(arg).replace(\"12\", \"\"));\n");
-console.log("- " + input + " should become " + expected);
-
 { //  Number(String(input).replace("12", ""));
 	const step_1 = String(input); 
 	const step_2 = step_1.replace("12", ""); 
@@ -14,8 +11,6 @@ console.log("- " + input + " should become " + expected);
 	output = step_3;
 };
 
-
-console.log("- actual: " + output );
 
 
 // empty trace-block 
