@@ -11,7 +11,9 @@
 </head>
 
 <body>
-  <script src="./trace-block.js"></script>
+  <script src="./scripts/trace-block.js"></script>
+  <script src="./scripts/trace-it.js"></script>
+  <script src="./scripts/clear-table.js"></script>
 
 	<div class="navbar">
 		<a>Number(</a>
@@ -24,6 +26,86 @@
 		<p>
 			Check out my trace block <a href="https://goo.gl/SiYwRw" target="_blank">on PythonTutor</a>, or by inspecting this page's sources.
 		</p>
+		<table>
+			<tr>
+				<td>
+					Input:
+					<br>
+					 a:	<input type="text" value="Number" id="a-type">
+						<input type="text" value="12345" id="a-value">
+					<br>
+					 b:	<input type="text" value="String" id="b-type">
+						<input type="text" value="12" id="b-value">
+					<br>
+					 c:	<input type="text" value="String" id="c-type">
+						<input type="text" value="" id="c-value">
+					<br>
+					Expected:
+					<br>
+					<input type="text" value="Number" id="expected-type">
+					<input type="text" value="345" id="expected-value">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" onclick="trace_it()">trace it</button>
+				</td>
+			</tr>
+		</table>
+
+		<br>
+
+		<table>
+		  <tr>
+		    <th>step</th>
+		    <th>state</th> 
+		    <th>operation</th>
+		  </tr>
+		  <tr>  <!-- 	s0    -->
+		    <td>initial state</td>
+		    <td id="s0"></td> 
+		    <td></td>
+		  </tr>
+		  <tr>  <!-- 	o1    -->
+		    <td></td>
+		    <td></td> 
+		    <td id="o1">String(a);</td>
+		  </tr>
+		  <tr>  <!-- 	s1    -->
+		    <td>step 1</td>
+		    <td>
+		    	<input id="s1-t" type="text" value=""> <br>
+		    	<input id="s1-v" type="text" value="">
+		    </td> 
+		    <td></td>
+		  </tr>
+		  <tr>  <!-- 	o2    -->
+		    <td></td>
+		    <td></td> 
+		    <td id="o2">s1.replace(b, c);</td>
+		  </tr>
+		  <tr>  <!-- 	s2    -->
+		    <td>step 2</td>
+		    <td>
+		    	<input id="s2-t" type="text" value=""> <br>
+		    	<input id="s2-v" type="text" value="">
+		    </td> 
+		    <td></td>
+		  </tr>
+		  <tr>  <!-- 	o3    -->
+		    <td></td>
+		    <td></td> 
+		    <td id="o3">Number(s2);</td>
+		  </tr>
+		  <tr>  <!-- 	sf    -->
+		    <td>final state</td>
+		    <td>
+		    	<input id="sf-t" type="text" value=""> <br>
+		    	<input id="sf-v" type="text" value="">
+		    </td> 
+		    <td><button type="button" onclick="clear_table()">clear table</button></td>
+		  </tr>
+		</table>
 	</div>
 </body>
 </html>
