@@ -29,18 +29,10 @@ function handler() {
         };
     var step_through = trace(args, expected);
 
-    var response;
-	if ( Object.is(actual, expected) ) {
-		response = "  PASS!";
-	} else {
-		response = "  fail.";
-	};
-
 
 	// write response to user
-    var response_div = document.getElementById("test-response");
-    response_div.innerHTML = response;
-
     console.log(step_through);
+    console.assert(Object.is(expected, actual), "expected !== actual");
+    
 };
 
