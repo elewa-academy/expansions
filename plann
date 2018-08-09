@@ -22,10 +22,13 @@ steps
 		exercises?
 	3. build it up
 		the file
-	4. live-ize it
+		code reviews?
+	4. doc it
 		write the html
 		and test cases
 	5. alt solutions
+		https://github.com/jankeLearning/codewars-v4
+		https://jankelearning.github.io/codewars-v4/
 		live-ize them
 	6. challenges
 		error handling

@@ -1,4 +1,4 @@
-tests({
+var test_cases = {
 
   '[12345 -> 345]': function() {
     assertStrictEquals(snippet_function(12345), 345);
@@ -30,4 +30,4 @@ tests({
 
 
 
-});
+};

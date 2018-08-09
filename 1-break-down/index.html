@@ -1,5 +1,3 @@
-<!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -13,85 +11,19 @@
 </head>
 
 <body>
-	<script src="scripts.js"></script>
-	<script src="trace-block.js"></script>
+  <script src="./trace-block.js"></script>
 
 	<div class="navbar">
-	  <a>Number(</a>
-	  <a>String(a)</a>
-	  <a>.replace(b, c)</a>
-	  <a>)</a>
-	  <a href="../index.html" style="float:right">home</a>
+		<a>Number(</a>
+		<a>String(a)</a>
+		<a>.replace(b, c)</a>
+		<a>)</a>
+		<a href="../index.html" style="float:right">home</a>
 	</div>
-	
 	<div class="main">
-		<table>
-			<tr>
-				<td>
-					Input:
-					<br>
-					 a:	<input type="text" value="type" id="a-type">
-						<input type="text" value="value" id="a-value">
-					<br>
-					 b:	<input type="text" value="type" id="b-type">
-						<input type="text" value="value" id="b-value">
-					<br>
-					 c:	<input type="text" value="type" id="c-type">
-						<input type="text" value="value" id="c-value">
-					<br>
-					Expected:
-					<br>
-					<input type="text" value="type" id="expected-type">
-					<input type="text" value="value" id="expected-value">
-				</td>
-			</tr>
-		</table>
-
-		<br>
-
-		<table>
-		  <tr>
-		    <th>step</th>
-		    <th>state</th> 
-		    <th>operation</th>
-		  </tr>
-		  <tr>  <!-- 	s0    -->
-		    <td>initial state</td>
-		    <td id="s0"></td> 
-		    <td><button type="button" onclick="trace()">trace it</button></td>
-		  </tr>
-		  <tr>  <!-- 	o1    -->
-		    <td></td>
-		    <td></td> 
-		    <td id="o1">String(a);</td>
-		  </tr>
-		  <tr>  <!-- 	s1    -->
-		    <td>step 1</td>
-		    <td id="s1"></td> 
-		    <td></td>
-		  </tr>
-		  <tr>  <!-- 	o2    -->
-		    <td></td>
-		    <td></td> 
-		    <td id="o2">s1.replace(b, c);</td>
-		  </tr>
-		  <tr>  <!-- 	s2    -->
-		    <td>step 2</td>
-		    <td id="s2"></td> 
-		    <td></td>
-		  </tr>
-		  <tr>  <!-- 	o3    -->
-		    <td></td>
-		    <td></td> 
-		    <td id="o3">Number(s2);</td>
-		  </tr>
-		  <tr>
-		    <td>final state</td>
-		    <td id="sf"></td> 
-		    <td><button type="button" onclick="clear_table()">clear table</button></td>
-		  </tr>
-		</table>
+		<p>
+			Check out my trace block <a href="https://goo.gl/SiYwRw" target="_blank">on PythonTutor</a>, or by inspecting this page's sources.
+		</p>
 	</div>
 </body>
 </html>
-

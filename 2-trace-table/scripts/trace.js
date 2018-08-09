@@ -54,49 +54,20 @@ function trace() {
 	s0_display.innerHTML = "(inspect page)";
 	console.log(s0);
 
-	var s1_display = document.getElementById("s1");
-	s1_display.innerHTML = typeof s1 + ": " + s1;
+	var s1_t = document.getElementById("s1-t");
+	s1_t.value = typeof s1;
+	var s1_v = document.getElementById("s1-v");
+	s1_v.value = s1;
 
-	var s2_display = document.getElementById("s2");
-	s2_display.innerHTML = typeof s2 + ": " + s2;
+	var s2_t = document.getElementById("s2-t");
+	s2_t.value = typeof s2;
+	var s2_v = document.getElementById("s2-v");
+	s2_v.value = s2;
 
-	var sf_display = document.getElementById("sf");
-	sf_display.innerHTML = typeof sf + ": " + sf;
+	var sf_t = document.getElementById("sf-t");
+	sf_t.value = typeof sf;
+	var sf_v = document.getElementById("sf-v");
+	sf_v.value = sf;
 
-	console.assert(expected === sf, [{expected: expected}, {actual: sf}] );
-};
-
-function cast(type, value) {
-
-	if (type == "Number") {
-    	return Number(value);
-
-    } else if (type == "String") {
-    	return value;
-
-    } else if (type == "Null") {
-    	return null;
-
-    } else if (type == "Boolean") {
-		if (value === "true") {
-			return true;
-		} else {
-			return false;
-		};
-    };
-    // functions return undefined by default
-};
-
-function clear_table() {
-	var s0_display = document.getElementById("s0");
-	s0_display.innerHTML = "";
-
-	var s1_display = document.getElementById("s1");
-	s1_display.innerHTML = "";
-
-	var s2_display = document.getElementById("s2");
-	s2_display.innerHTML = "";
-
-	var sf_display = document.getElementById("sf");
-	sf_display.innerHTML = "";
+	console.assert(sf === expected, [{actual: sf}, {expected: expected}] );
 };
