@@ -1,14 +1,14 @@
-// exercises for String(thing)
+{ // exercises for String(thing)
+	let a;
+	let exp_a = String(null + null);
 
-let a;
-let exp_a = String(null + null);
+	console.assert(a === exp_a, "a !== exp_a");
 
-console.assert(a === exp_a, "a !== exp_a");
+	// ---------------------------
 
-// ---------------------------
+	let b;
 
-let b;
+	let exp_b = String(", ", ",");
 
-let exp_b = String(", ", ",");
-
-console.assert(b === exp_b, "b !== exp_b");
+	console.assert(b === exp_b, "b !== exp_b");
+};

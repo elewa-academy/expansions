@@ -1,15 +1,16 @@
-// exercises for practicing casting to Number
+{ // exercises for practicing casting to Number
 
-let a;
+	let a;
 
-console.assert(Object.is( Number(a), NaN ), "a !== NaN");
+	console.assert(Object.is( Number(a), NaN ), "a !== NaN");
 
-// ------------------------------------------
+	// ------------------------------------------
 
-let b;
+	let b;
 
-let step_1 = Number(undefined);
-let exp_b = step_1 += b;
+	let step_1 = Number(undefined);
+	let exp_b = step_1 += b;
 
-console.assert(exp_b === "NaNaN", "b !== NaNaN");
+	console.assert(exp_b === "NaNaN", "b !== NaNaN");
 
+};
