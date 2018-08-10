@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <title>part-task</title>
+        
+        <link rel="stylesheet" href="./style.css">
+
+        <!-- the scripts that make parsons work -->
+        <link href="./utils/parsons.css" rel="stylesheet" />
+        <link href="./utils/lib/prettify.css" rel="stylesheet" />
+        <script src="./utils/lib/prettify.js"></script>
+        <script src="./utils/include.js"></script>
+        <script src="./utils/lib/jquery.min.js"></script>
+        <script src="./utils/lib/jquery-ui.min.js"></script>
+        <script src="./utils/lib/jquery.ui.touch-punch.min.js"></script>
+        <script src="./utils/lib/underscore-min.js"></script>
+        <script src="./utils/lib/lis.js"></script>
+        <script src="./utils/parsons.js"></script>
+        <script src='./utils/index.js'></script>
+    </head>
+    <body>
+
+        <!-- require your exercises -->
+        <script src="./exercises/number.js"></script>
+        <script src="./exercises/replace.js"></script>
+        <script src="./exercises/string.js"></script>
+
+        <div class="navbar">
+            <a>Number(</a>
+            <a>String(a)</a>
+            <a>.replace(b, c)</a>
+            <a>)</a>
+            <a href="../index.html" style="float:right">home</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div id="parsons">
+            <div name="parsons-boxes">
+                <!-- modify this line's id -->
+                <div id="shuffled-let-vs-var" name="shuffled" class="sortable-code"></div>
+                <!-- modify this line's id -->
+                <div id="sorted-let-vs-var" name="sorted" class="sortable-code"></div> 
+                <div style="clear:both;"></div>
+            </div>
+
+            <div name="parsons-buttons">
+                <!-- modify this line's id -->
+                <a href="#" id="reshuffle-let-vs-var" name="reshuffle">Re-Shuffle</a>
+                <!-- modify this line's id -->
+                <a href="#" id="feedback-let-vs-var" name="feedback">Get feedback</a>
+            </div>
+            <script>
+                // define your challenge here
+                config = {};
+
+                config.shuffled_id = "shuffled-let-vs-var";
+                config.sorted_id = "sorted-let-vs-var";
+                config.reshuffle_id = "reshuffle-let-vs-var";
+                config.feedback_id = "feedback-let-vs-var";
+                config.challenge = 
+                        "// {number, 12345} -> {number, 345} \n" +
+                        "Number(String(12345).replace(\"12\", \"\")); \n" +
+                        "  //  {number, 12345} \n" +
+                        "  String(12345); \n" +
+                        "  //  {string, \"12345\"} \n" +
+                        "  \"12345\".replace(\"12\", \"\"); \n" +
+                        "  //  {string, \"345\"} \n" +
+                        "  Number(\"345\"); \n" +
+                        "  //  {number, 345}";
+
+                init_section(config);
+            </script>
+            <br>
+        </div>
+        <hr>
+        <a href="http://elewa.education/blog" target="_blank"><img src="https://user-images.githubusercontent.com/18554853/34921062-506450ae-f97d-11e7-875f-6feeb26ad72d.png" width="150" height="60"/></a>
+        <br>
+        <br>
+    </body>
+</html>
