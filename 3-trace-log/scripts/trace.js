@@ -5,8 +5,9 @@ function trace(args, expected) {
 
 	trace.push( args );
 
+	let step_1;
 	try {
-		const step_1 = String(args.a);
+		step_1 = String(args.a);
 		trace.push( {op_1: "String(a);"} );
 		trace.push( {step_1} );
 	} catch (err) {
@@ -17,8 +18,9 @@ function trace(args, expected) {
 		return trace;
 	};
 
+	let step_2;
 	try {
-		const step_2 = step_1.replace(args.b, args.c);
+		step_2 = step_1.replace(args.b, args.c);
 		trace.push( {op_2: "step_1.replace(b, c);"} );
 		trace.push( {step_2} );
 	} catch (err) {
@@ -28,8 +30,9 @@ function trace(args, expected) {
 		return trace;
 	};
 
+	let step_3;
 	try {
-		const step_3 = undefined.prop;
+		step_3 = Number(step_2);
 		trace.push( {op_3: "Number(step_2);"} );
 		trace.push( {actual: step_3} );
 	} catch (err) {

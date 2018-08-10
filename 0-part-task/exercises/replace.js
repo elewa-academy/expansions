@@ -1,11 +1,14 @@
 { // exercises for String.prototype.replace()
 	let a = 404;
+	let expected = 414;
 
 	try {
-		a.replace("0", "1");
+		let actual = a.replace("0", "1");
 	} catch (err) {
 		throw(err);
 	};
+
+	console.assert(actual === expected, "actual !== 414")
 
 	// ----------------------
 

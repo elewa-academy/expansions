@@ -1,6 +1,6 @@
 { // exercises for practicing casting to Number
 
-	let a;
+	let a = 0;
 
 	console.assert(Object.is( Number(a), NaN ), "a !== NaN");
 
