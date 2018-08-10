@@ -1,18 +1,15 @@
-// utility function: necessary, but not the main purpose
-// encapsulated: otherwise you'd have to write this twice
-
 function cast(type, value) {
 
-	if (type == "Number") {
-    	return Number(value);
+    if (type == "number" || type == "Number") {
+        return Number(value);
 
-    } else if (type == "String") {
-    	return value;
+    } else if (type == "string" || type == "String") {
+        return value;
 
-    } else if (type == "Null") {
-    	return null;
+    } else if (type == "null" || type == "Null") {
+        return null;
 
-    } else if (type == "Boolean") {
+    } else if (type == "boolean" || type == "Boolean") {
         if (value === "true") {
             return true;
         } else {
