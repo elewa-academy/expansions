@@ -4,6 +4,7 @@
 <head>
 
     <!-- the function -->
+    <script src="./scripts/callstack.js"></script>
     <script src="./scripts/call-expression.js"></script>
     <script src="./scripts/cast.js"></script>
     <script src="./scripts/handler.js"></script>
@@ -13,8 +14,11 @@
 
     <script>
     window.onload = function() {
+        callstack.push(window.onload);
+        console.log(callstack);
         var test_butt = document.getElementById("test-button");
         test_butt.addEventListener("click", handler);
+        callstack.pop();
     };
     </script>
 

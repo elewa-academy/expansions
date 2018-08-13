@@ -1,5 +1,6 @@
 function cast(type, value) {
 
+
     if (type == "number" || type == "Number") {
         return Number(value);
 
@@ -16,5 +17,6 @@ function cast(type, value) {
             return false;
         };
     };
+
     // functions return undefined by default
 };

@@ -11,6 +11,7 @@ function trace(args, expected) {
 		trace.push( {op_1: "String(a);"} );
 		trace.push( {step_1} );
 	} catch (err) {
+		trace.push( {op_1: "String(a);"} );
 		trace.push(err);
 		trace.push( {op_2: "step_1.replace(b, c);"} );
 		trace.push( {op_3: "Number(step_2);"} );
@@ -24,6 +25,7 @@ function trace(args, expected) {
 		trace.push( {op_2: "step_1.replace(b, c);"} );
 		trace.push( {step_2} );
 	} catch (err) {
+		trace.push( {op_2: "step_1.replace(b, c);"} );
 		trace.push({op_2: err});
 		trace.push( {op_3: "Number(step_2);"} );
 		trace.push( {expected} );
@@ -36,6 +38,7 @@ function trace(args, expected) {
 		trace.push( {op_3: "Number(step_2);"} );
 		trace.push( {actual: step_3} );
 	} catch (err) {
+		trace.push( {op_3: "Number(step_2);"} );
 		trace.push(err);
 		trace.push( {expected} );
 		return trace;
