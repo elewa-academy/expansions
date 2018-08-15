@@ -5,12 +5,23 @@
 
 <head>
 
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- pre-built tests -->
+    <script src="./scripts/call-expression.js"></script>
+    <script src="./scripts/cast.js"></script>
+    <script src="./scripts/handler.js"></script>
+
+
     <script src="./test/tiny-test.js"></script>
 	<script src="./test/test-cases.js"></script>
     <script src="./test/test.js"></script>
 
+    <script>
+        window.onload = function() {
+            var test_butt = document.getElementById("test-button");
+            test_butt.addEventListener("click", handler);
+        };
+    </script>
 
 </head>
 
@@ -19,6 +30,46 @@
       <a>Name of Function</a>
       <a href="../index.html" style="float:right">home</a>
     </div>
+
+    <div class="main">
+        <table>
+            <tr>
+                <td>
+                    Input:
+                    <br>
+                     a: <input type="text" value="type" id="a-type">
+                        <input type="text" value="value" id="a-value">
+                    <br>
+                     b: <input type="text" value="type" id="b-type">
+                        <input type="text" value="value" id="b-value">
+                    <br>
+                     c: <input type="text" value="type" id="c-type">
+                        <input type="text" value="value" id="c-value">
+                    <br>
+                    Expected:
+                    <br>
+                    <input type="text" value="type" id="expected-type">
+                    <input type="text" value="value" id="expected-value">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    trace it: <input type="checkbox" id="trace-it" >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="test-button">test it </button> <a id="test-response"></a> 
+                </td>
+            </tr>
+        </table> 
+    <br>
+
+    <br>
+    <br>  
+    <div id="response-div"></div>
+
+
 
 
 <!-- 
@@ -32,6 +83,8 @@
     behavior description
 
     usage examples
+
+    input/output fields
 
 -->
 

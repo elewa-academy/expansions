@@ -1,1 +1,1 @@
-test(test_cases);
+tests(test_cases);
